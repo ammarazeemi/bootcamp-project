@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://accounts.google.com/gsi/" async></script>
+    {% load static %}
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static '/css/signup.css' %}">
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=121115&format=png&color=000000" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form action="{% url 'index' %}" method="post">
+            {% csrf_token %} {{ msg }}
+            <!--<label for="email" id="email">Email</label>-->
+            <br>
+            <input type="email" name="username" id="username" placeholder="Email" required>
+            <br>
+            <!--<label for="password" id="password">Password</label>-->
+            <br>
+            <input type="text" name="password" id="password" placeholder="Password" required>
+            <br>
+            <input type="submit" value="Login" id="submit">
+        </form>
+        <p id="or">OR</p>
+        <p id="login-text">Don't have an account? <a href="{% url 'signup' %}">Signup</a></p>
+    </div>
+
+    <script src="{% static '/js/login.js' %}"></script>
+</body>
+</html>

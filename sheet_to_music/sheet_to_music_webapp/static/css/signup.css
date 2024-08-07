@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    padding: 20px;
+    margin: 10px;
+    max-width: 100%;
+    position: relative;
+}
+
+#email{
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 5px 0;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+}
+
+#password{
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 5px 0;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+}
+
+#username, #password{
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 5px 0;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+}
+
+#checkbox{
+    margin-right: 5px;
+    cursor: pointer;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+#submit{
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.seperator{
+    width: 70%;
+    height: 1px;
+    background-color: #aaa;
+    margin: 20px 0;
+}
+
+.login-google{
+    background-color: #db3434;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px;
+    width: 65%;
+    margin-top: 10px;
+}
+
+#or{
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#login-text{
+    text-align: center;
+    margin-top: 15px;
+}

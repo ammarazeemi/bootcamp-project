@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="750088284901-jcv1nber877tcosfl1qc6gf2m08sm81k.apps.googleusercontent.com">
+    <title>SignUp</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/css/signup.css' %}">
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=121115&format=png&color=000000" type="image/x-icon">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>SignUp</h1>
+        <form action="" method="post">
+            {% csrf_token %} {{ msg }}
+            <!--<label for="email" id="email">Email</label>-->
+            <br>
+            <input type="email" name="email" id="username" placeholder="Email" pattern="[A-Za-z0-9]+@gmail.com" required>
+            <br>
+            <!--<label for="password" id="password">Password</label>-->
+            <br>
+            <input type="password" name="password" id="password" placeholder="Password" minlength="8"  required>
+            <br>
+            <input type="checkbox" name="remember" id="checkbox" required><a>I agree to the Terms of Service</a>
+            <br>
+            <input type="submit" value="SignUp" id="submit">
+        </form>
+        <p id="or">OR</p>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <div id="g_id_onload"
+         data-client_id="750088284901-jcv1nber877tcosfl1qc6gf2m08sm81k.apps.googleusercontent.com"
+         data-login_uri="http://127.0.0.1:8000/signup"
+         data-auto_prompt="false">
+        </div>
+        <p id="login-text">Already have an account? <a href="{% url 'login' %}">Login</a></p>
+    </div>
+    <script src="{% static '/js/login.js' %}"></script>
+</body>
+</html>

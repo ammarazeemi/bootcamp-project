@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/style_responsive.css' %}">
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=100&id=121115&format=png&color=000000" type="image/x-icon">
+</head>
+<body>
+    <section>
+        <nav class="nav">
+            <button class="menu-toggle" onclick="toggleSidebar()">☰</button>
+            <h1>SheetToMusic</h1>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <button><a href="{% url 'login' %}">Login</a></button>
+        </nav>
+        <div class="overlay" onclick="closeSidebar()"></div>
+    </section>
+
+    <section>
+        <div class="hero">
+            <h1>Welcome to SheetToMusic</h1>
+            <img src="https://images.unsplash.com/photo-1590377830274-93e66ae34415?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG11c2ljaWFufGVufDB8fDB8fHww" alt="hero section image">
+            <button><a href="{% url 'signup' %}">Get Started</a></button>
+        </div>
+    </section>
+
+    <section class="card" >
+        <div class="card-1">
+            <img src="https://images.unsplash.com/photo-1593697820940-43e77b53a1e1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG11c2ljaWFufGVufDB8fDB8fHww" alt="image1">
+            <h1>Lorem ipsum</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem beatae culpa eligendi nobis dicta dolor eaque accusamus! Tempore soluta, ipsa ipsam enim illo ad assumenda dolorem maiores animi ab placeat.</p>
+        </div>
+        <div class="card-2">
+            <img src="https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8fA%3D%3D" alt="image2">
+            <h1>Lorem ipsum</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem beatae culpa eligendi nobis dicta dolor eaque accusamus! Tempore soluta, ipsa ipsam enim illo ad assumenda dolorem maiores animi ab placeat.</p>
+        </div>
+        <div class="card-3">
+            <img src="https://images.unsplash.com/photo-1526142684086-7ebd69df27a5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fHw%3D" alt="image3">
+            <h1>Lorem ipsum</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem beatae culpa eligendi nobis dicta dolor eaque accusamus! Tempore soluta, ipsa ipsam enim illo ad assumenda dolorem maiores animi ab placeat.</p>
+        </div>
+    </section>
+
+    <section>
+        <footer class="footer">
+            <p>&copy; 2023 SheetToMusic. All rights reserved.</p>
+            <a href="#"><img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="icon1"></a>
+            <a href="#"><img src="https://img.icons8.com/?size=100&id=32323&format=png&color=000000" alt="icon2"></a>
+            <a href="#"><img src="https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=000000" alt="icon3"></a>
+        </footer>
+    </section>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
